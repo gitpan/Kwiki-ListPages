@@ -3,7 +3,7 @@ package Kwiki::ListPages;
 use Kwiki::Plugin -Base;
 use mixin 'Kwiki::Installer';
 
-our $VERSION = '0.10';
+our $VERSION = '0.11';
 
 const class_title => 'List Pages';
 const class_id => 'list_pages';
@@ -92,7 +92,7 @@ __template/tt2/list_pages_content.html__
 [% FOREACH letter IN pages %]
  [% IF letter.value.size > 0 %]
  <tr>
- <td class="header" colspan="3"><a name="#[%letter.key%]">[% letter.key %]</a></td>
+ <td class="header" colspan="3"><a name="[%letter.key%]">[% letter.key %]</a></td>
  </tr>
    [% FOREACH page = letter.value %]
        <tr>
